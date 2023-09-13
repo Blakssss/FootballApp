@@ -12,11 +12,13 @@ namespace FootballApp
 
         private static string currentDirectory = Environment.CurrentDirectory;
         private static string filePath = $"{currentDirectory}\\Filer";
+        private static string fileHeader;
 
         // denne constructor skal du bare skrive navnet på den fil du vil læse fx "teams.csv"
-        public fileHandler(string fileName)
+        public fileHandler(string fileName, string header)
         {
             filePath = Path.Combine(filePath, fileName);
+            fileHeader = header;
         }
 
 
@@ -70,7 +72,8 @@ namespace FootballApp
 
         public void write(List<string[]> rows)
         {
-
+            try(){
+                
         }
     }
 }
